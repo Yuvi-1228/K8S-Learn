@@ -1,0 +1,10 @@
+kind: DevOpsBatch
+apiVersion: cloudwithyuvi.com/v1
+metadata:
+  name: cloudian-batch-9
+sepc:
+  name: devops full course 
+  duration: 3 months 
+  platform: cloudwithyuvi.com
+  mode: Fully online 
+ 

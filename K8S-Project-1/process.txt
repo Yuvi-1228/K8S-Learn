@@ -1,0 +1,21 @@
+* Clone the project from git 
+* Then create docker image and push the image into dockerHub
+# Create docker image 
+    - docker build -t <image-name notes-app-k8s> .
+
+#  Then tag the images and push to dockerHub
+    - docker tag <old-image-name>:latest <docker-username/image-name>:latest
+    - docker push <new-image-name>:latest
+
+# now create a folder and create menifest file for app deployement
+    - Create deployment file
+    - create namespace file 
+    - create servcie file 
+
+# Then apply all the menifest file 
+    - kubectl apply -f namespace.yaml
+    - kubectl apply -f deployment.yaml
+    - Kubectl apply -f service.yaml
+# Expose port using 
+    - Kubectl port-forward service/<service-name> -n namespace 8000:8000 --address=0.0.0.0
+    - Make sure that you have to open 8000 port in your firewall

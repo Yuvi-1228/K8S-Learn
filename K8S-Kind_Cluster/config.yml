@@ -1,0 +1,19 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+
+# Create Custer how worker you want to create with contril panel
+nodes:
+- role: control-plane
+  image: kindest/node:v1.30.13
+- role: worker
+  image: kindest/node:v1.30.13
+- role: worker
+  image: kindest/node:v1.30.13
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 443
+    hostPort: 443
+    protocol: TCP
+
