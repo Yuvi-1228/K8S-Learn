@@ -42,6 +42,13 @@ nodes:
   image: kindest/node:v1.31.2
 - role: worker
   image: kindest/node:v1.31.2
+   extraPortMappings:
+  - containerPort: 80
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 443
+    hostPort: 443
+    protocol: TCP
 ```
 
 ## Create a cluster using configuration file 
